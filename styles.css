@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Outfit&display=swap');
+
+body {
+    background-color: rgb(24, 24, 24);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    overflow: hidden;
+    transition: background-color 0.5s ease-out;
+  }
+  
+  form {
+    margin-bottom: 20px;
+  }
+  
+  .title, .drag {
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+
+  .logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 20px;
+        font-family: 'Outfit';
+        user-select: none;
+        cursor: default;
+    }
+
+  .disclaimer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Helvetica Neue';
+    font-weight: 400;
+  }  
+
+  .done {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(214, 214, 214, 0.8);
+    padding: 10px;
+  }
+  
+  .done h2 {
+    color: #1f1f1f;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .done h2.donetxt {
+    text-align: right;
+    font-family: 'Helvetica Neue';
+    cursor: pointer;
+  }
+  
+
+  .image-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-left: 20vh;
+  }
+  
+  #imageDisplay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 105%;
+    max-height: 105%;
+    border-radius: 50%;
+    animation: blur-pulse 5s infinite;
+  }
+  
+  @keyframes blur-pulse {
+    0% {
+      filter: blur(5px);
+    }
+    50% {
+      filter: blur(10px);
+    }
+    100% {
+      filter: blur(5px);
+    }
+  }
+  
+  
+  #imageDisplayBlur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 1;
+    border-radius: 50%;
+  }
